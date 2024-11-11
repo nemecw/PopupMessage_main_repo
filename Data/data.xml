@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<Events>
+  <Item>
+    <id>1</id>
+    <person>Федоруца Ніна Петрівна</person>
+    <on_date>10.01.1960</on_date>
+	<event>день народження</event>
+	<comment>друг сім'ї</comment>
+  </Item>
+  <Item>
+    <id>1</id>
+    <person>Камбур Кіра</person>
+    <on_date>10.01.2013</on_date>
+	<event>день народження</event>
+	<comment>дочка кума</comment>
+  </Item>
+</Events>
