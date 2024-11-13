@@ -1,17 +1,698 @@
-<?xml version="1.0" standalone="yes"?>
-<Events>
-  <Item>
-    <id>1</id>
-    <person>Федоруца Ніна Петрівна</person>
-    <on_date>10.01.1960</on_date>
-	<event>день народження</event>
-	<comment>друг сім'ї</comment>
-  </Item>
-  <Item>
-    <id>1</id>
-    <person>Камбур Кіра</person>
-    <on_date>10.01.2013</on_date>
-	<event>день народження</event>
-	<comment>дочка кума</comment>
-  </Item>
+﻿<Events>
+  <Table1>
+    <Id>1</Id>
+    <Person>Федоруца Ніна Петрівна</Person>
+    <Event>день народження</Event>
+    <Comment>друг сім'ї</Comment>
+    <On_date>10.01.1960 0:00:00</On_date>
+    <Sort>0110</Sort>
+  </Table1>
+  <Table1>
+    <Id>2</Id>
+    <Person>Камбур Кіра</Person>
+    <Event>день народження</Event>
+    <Comment>дочка кума</Comment>
+    <On_date>10.01.2013 0:00:00</On_date>
+    <Sort>0110</Sort>
+  </Table1>
+  <Table1>
+    <Id>3</Id>
+    <Person>Антіпов Сергій Миколайович</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>12.01.1947 0:00:00</On_date>
+    <Sort>0112</Sort>
+  </Table1>
+  <Table1>
+    <Id>4</Id>
+    <Person>Антоніна</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>17.01.2024 11:11:29</On_date>
+    <Sort>0117</Sort>
+  </Table1>
+  <Table1>
+    <Id>5</Id>
+    <Person>Рулякова Люда</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>17.01.1977 11:11:29</On_date>
+    <Sort>0117</Sort>
+  </Table1>
+  <Table1>
+    <Id>6</Id>
+    <Person>Нємой Надюша</Person>
+    <Event>день народження</Event>
+    <Comment>фіна</Comment>
+    <On_date>21.01.1985 11:11:29</On_date>
+    <Sort>0121</Sort>
+  </Table1>
+  <Table1>
+    <Id>7</Id>
+    <Person>Яворський Славік</Person>
+    <Event>день народження</Event>
+    <Comment>друг, одногрупник</Comment>
+    <On_date>22.01.1976 11:11:29</On_date>
+    <Sort>0122</Sort>
+  </Table1>
+  <Table1>
+    <Id>8</Id>
+    <Person>Коротчук Вово</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>28.01.1976 11:11:29</On_date>
+    <Sort>0128</Sort>
+  </Table1>
+  <Table1>
+    <Id>9</Id>
+    <Person>Гусєва Катя</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>29.01.1987 11:11:29</On_date>
+    <Sort>0129</Sort>
+  </Table1>
+  <Table1>
+    <Id>10</Id>
+    <Person>Городенська Інна</Person>
+    <Event>день народження</Event>
+    <Comment>кума</Comment>
+    <On_date>05.02.1978 11:11:29</On_date>
+    <Sort>0205</Sort>
+  </Table1>
+  <Table1>
+    <Id>11</Id>
+    <Person>Коротчук Яна Іванівна</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>19.02.1978 11:11:29</On_date>
+    <Sort>0219</Sort>
+  </Table1>
+  <Table1>
+    <Id>12</Id>
+    <Person>Маланіч Віта</Person>
+    <Event>день народження</Event>
+    <Comment>кума</Comment>
+    <On_date>28.02.1973 11:11:29</On_date>
+    <Sort>0228</Sort>
+  </Table1>
+  <Table1>
+    <Id>13</Id>
+    <Person>тітка Валя</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>08.03.1961 11:11:29</On_date>
+    <Sort>0308</Sort>
+  </Table1>
+  <Table1>
+    <Id>14</Id>
+    <Person>Унгурян Василь Васильович</Person>
+    <Event>день народження</Event>
+    <Comment>дядя</Comment>
+    <On_date>12.03.1957 11:11:29</On_date>
+    <Sort>0312</Sort>
+  </Table1>
+  <Table1>
+    <Id>15</Id>
+    <Person>Городенська Оля</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>18.03.2015 11:11:29</On_date>
+    <Sort>0318</Sort>
+  </Table1>
+  <Table1>
+    <Id>16</Id>
+    <Person>Шинкарук Василь Дмитрович</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>25.03.1961 11:11:29</On_date>
+    <Sort>0325</Sort>
+  </Table1>
+  <Table1>
+    <Id>17</Id>
+    <Person>Костомська Ольга Євгенівна</Person>
+    <Event>день народження</Event>
+    <Comment>кума</Comment>
+    <On_date>28.03.1974 11:11:29</On_date>
+    <Sort>0328</Sort>
+  </Table1>
+  <Table1>
+    <Id>18</Id>
+    <Person>Федоруца Андрій Євгенович</Person>
+    <Event>день народження</Event>
+    <Comment>друг</Comment>
+    <On_date>04.04.1984 11:11:29</On_date>
+    <Sort>0404</Sort>
+  </Table1>
+  <Table1>
+    <Id>19</Id>
+    <Person>Брюховецька Оксана</Person>
+    <Event>день народження</Event>
+    <Comment>кума</Comment>
+    <On_date>07.04.1976 11:11:29</On_date>
+    <Sort>0407</Sort>
+  </Table1>
+  <Table1>
+    <Id>20</Id>
+    <Person>Вікірюк Вітілій Віталійович</Person>
+    <Event>день народження</Event>
+    <Comment>син друга</Comment>
+    <On_date>09.04.1995 11:11:29</On_date>
+    <Sort>0409</Sort>
+  </Table1>
+  <Table1>
+    <Id>21</Id>
+    <Person>Оліфіренко Борис</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>13.04.1953 11:11:29</On_date>
+    <Sort>0413</Sort>
+  </Table1>
+  <Table1>
+    <Id>22</Id>
+    <Person>Максименко Андрій</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>22.04.1970 11:11:29</On_date>
+    <Sort>0422</Sort>
+  </Table1>
+  <Table1>
+    <Id>23</Id>
+    <Person>Білик Валера</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>07.05.1651 11:11:29</On_date>
+    <Sort>0507</Sort>
+  </Table1>
+  <Table1>
+    <Id>24</Id>
+    <Person>Федоруца Олексій Євгенович</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>14.05.1986 11:11:29</On_date>
+    <Sort>0514</Sort>
+  </Table1>
+  <Table1>
+    <Id>25</Id>
+    <Person>Заставна</Person>
+    <Event>храм</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>22.05.1986 11:11:29</On_date>
+    <Sort>0522</Sort>
+  </Table1>
+  <Table1>
+    <Id>26</Id>
+    <Person>Тарадачук Юліана Сергіївна</Person>
+    <Event>день народження</Event>
+    <Comment>дочка кума</Comment>
+    <On_date>05.06.2002 11:11:29</On_date>
+    <Sort>0605</Sort>
+  </Table1>
+  <Table1>
+    <Id>27</Id>
+    <Person>Боролюк Вадим Володимиров</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>06.06.1960 11:11:29</On_date>
+    <Sort>0606</Sort>
+  </Table1>
+  <Table1>
+    <Id>28</Id>
+    <Person>Алла</Person>
+    <Event>день народження</Event>
+    <Comment>фіна</Comment>
+    <On_date>14.06.1985 11:11:29</On_date>
+    <Sort>0614</Sort>
+  </Table1>
+  <Table1>
+    <Id>29</Id>
+    <Person>Сидор Тарас Миколайович</Person>
+    <Event>день народження</Event>
+    <Comment>співробітник Газ/Чернісофт</Comment>
+    <On_date>16.06.1978 11:11:29</On_date>
+    <Sort>0616</Sort>
+  </Table1>
+  <Table1>
+    <Id>30</Id>
+    <Person>Федоруца Лев Олексійович</Person>
+    <Event>день народження</Event>
+    <Comment>син кума</Comment>
+    <On_date>21.06.2013 11:11:29</On_date>
+    <Sort>0621</Sort>
+  </Table1>
+  <Table1>
+    <Id>31</Id>
+    <Person>Камбур Таня</Person>
+    <Event>день народження</Event>
+    <Comment>дружина кума</Comment>
+    <On_date>23.06.1986 11:11:29</On_date>
+    <Sort>0623</Sort>
+  </Table1>
+  <Table1>
+    <Id>32</Id>
+    <Person>Ватаманюк Антоніна</Person>
+    <Event>день народження</Event>
+    <Comment>доця</Comment>
+    <On_date>26.06.2001 11:11:29</On_date>
+    <Sort>0626</Sort>
+  </Table1>
+  <Table1>
+    <Id>33</Id>
+    <Person>Тарадачук Олександр Сергійович</Person>
+    <Event>день народження</Event>
+    <Comment>похресник</Comment>
+    <On_date>27.06.2000 11:11:29</On_date>
+    <Sort>0627</Sort>
+  </Table1>
+  <Table1>
+    <Id>34</Id>
+    <Person>Ватаманюк Данило Олександрович</Person>
+    <Event>день народження</Event>
+    <Comment>племінник</Comment>
+    <On_date>01.07.2007 11:11:29</On_date>
+    <Sort>0701</Sort>
+  </Table1>
+  <Table1>
+    <Id>35</Id>
+    <Person>Маланіч Маша</Person>
+    <Event>день народження</Event>
+    <Comment>похресниця</Comment>
+    <On_date>02.07.2001 11:11:29</On_date>
+    <Sort>0702</Sort>
+  </Table1>
+  <Table1>
+    <Id>36</Id>
+    <Person>Інна</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>20.06.2001 11:11:29</On_date>
+    <Sort>0620</Sort>
+  </Table1>
+  <Table1>
+    <Id>37</Id>
+    <Person>Маланіч(?) Даніель</Person>
+    <Event>день народження</Event>
+    <Comment>внук кума</Comment>
+    <On_date>03.07.2021 11:11:29</On_date>
+    <Sort>0703</Sort>
+  </Table1>
+  <Table1>
+    <Id>38</Id>
+    <Person>Маланіч Сергій</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>04.07.1968 11:11:29</On_date>
+    <Sort>0704</Sort>
+  </Table1>
+  <Table1>
+    <Id>39</Id>
+    <Person>Оліфіренко Наталя Романівна</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>07.07.1957 11:11:29</On_date>
+    <Sort>0707</Sort>
+  </Table1>
+  <Table1>
+    <Id>40</Id>
+    <Person>Камбур Олександр і Танюша</Person>
+    <Event>вінчання</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>14.07.2021 11:11:29</On_date>
+    <Sort>0714</Sort>
+  </Table1>
+  <Table1>
+    <Id>41</Id>
+    <Person>Володимир</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>21.10.2021 11:11:29</On_date>
+    <Sort>1021</Sort>
+  </Table1>
+  <Table1>
+    <Id>42</Id>
+    <Person>Тарадачук Сергій Стапанович</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>15.07.1976 11:11:29</On_date>
+    <Sort>0715</Sort>
+  </Table1>
+  <Table1>
+    <Id>43</Id>
+    <Person>Білик Настя</Person>
+    <Event>день народження</Event>
+    <Comment>дочка Валери</Comment>
+    <On_date>22.07.2011 11:11:29</On_date>
+    <Sort>0722</Sort>
+  </Table1>
+  <Table1>
+    <Id>44</Id>
+    <Person>Василь Артемович</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>22.07.1960 11:11:29</On_date>
+    <Sort>0722</Sort>
+  </Table1>
+  <Table1>
+    <Id>45</Id>
+    <Person>Ольга</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>10.11.2011 11:11:29</On_date>
+    <Sort>1110</Sort>
+  </Table1>
+  <Table1>
+    <Id>46</Id>
+    <Person>Камбур Олександр Семенович</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>26.07.1977 11:11:29</On_date>
+    <Sort>0726</Sort>
+  </Table1>
+  <Table1>
+    <Id>47</Id>
+    <Person>Ткачук Ігор</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>02.08.1978 11:11:29</On_date>
+    <Sort>0802</Sort>
+  </Table1>
+  <Table1>
+    <Id>48</Id>
+    <Person>ҐПоперечний Олександр</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>13.08.1976 11:11:29</On_date>
+    <Sort>0813</Sort>
+  </Table1>
+  <Table1>
+    <Id>49</Id>
+    <Person>Білоголовка Тарас Тарасович</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>15.08.1981 11:11:29</On_date>
+    <Sort>0815</Sort>
+  </Table1>
+  <Table1>
+    <Id>50</Id>
+    <Person>Тарадачук лілія Миколаївна</Person>
+    <Event>день народження</Event>
+    <Comment>кума</Comment>
+    <On_date>21.08.1976 11:11:29</On_date>
+    <Sort>0821</Sort>
+  </Table1>
+  <Table1>
+    <Id>51</Id>
+    <Person>Костомський Євген Миколайович</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>21.08.1947 11:11:29</On_date>
+    <Sort>0821</Sort>
+  </Table1>
+  <Table1>
+    <Id>52</Id>
+    <Person>Дубчак Віталій Петрович</Person>
+    <Event>день народження</Event>
+    <Comment>одногрупник</Comment>
+    <On_date>23.08.1977 11:11:29</On_date>
+    <Sort>0823</Sort>
+  </Table1>
+  <Table1>
+    <Id>53</Id>
+    <Person>Федоруца Євген Іванович</Person>
+    <Event>день народження</Event>
+    <Comment>друг</Comment>
+    <On_date>27.08.1955 11:11:29</On_date>
+    <Sort>0827</Sort>
+  </Table1>
+  <Table1>
+    <Id>54</Id>
+    <Person>Штогрин Алла Миколаївна</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>30.08.1988 11:11:29</On_date>
+    <Sort>0830</Sort>
+  </Table1>
+  <Table1>
+    <Id>55</Id>
+    <Person>Шовган Катя</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>17.09.2011 11:11:29</On_date>
+    <Sort>0917</Sort>
+  </Table1>
+  <Table1>
+    <Id>56</Id>
+    <Person>Камбур Антоніна Іванівна</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>18.09.1953 11:11:29</On_date>
+    <Sort>0918</Sort>
+  </Table1>
+  <Table1>
+    <Id>57</Id>
+    <Person>Ватаманюк Максим</Person>
+    <Event>день народження</Event>
+    <Comment>синуля</Comment>
+    <On_date>18.09.2015 11:11:29</On_date>
+    <Sort>0918</Sort>
+  </Table1>
+  <Table1>
+    <Id>58</Id>
+    <Person>Ватаманюк-Костомський Олександр</Person>
+    <Event>день народження</Event>
+    <Comment>синуля</Comment>
+    <On_date>19.09.2005 11:11:29</On_date>
+    <Sort>0919</Sort>
+  </Table1>
+  <Table1>
+    <Id>59</Id>
+    <Person>Людмила</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>29.09.2005 11:11:29</On_date>
+    <Sort>0929</Sort>
+  </Table1>
+  <Table1>
+    <Id>60</Id>
+    <Person>Перцов Андрій</Person>
+    <Event>день народження</Event>
+    <Comment>одногрупник</Comment>
+    <On_date>30.09.1977 11:11:29</On_date>
+    <Sort>0930</Sort>
+  </Table1>
+  <Table1>
+    <Id>61</Id>
+    <Person>Надія</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>17.09.1977 11:11:29</On_date>
+    <Sort>0917</Sort>
+  </Table1>
+  <Table1>
+    <Id>62</Id>
+    <Person>Волощук Валя</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>05.10.1975 11:11:29</On_date>
+    <Sort>1005</Sort>
+  </Table1>
+  <Table1>
+    <Id>63</Id>
+    <Person>Костомський Євген та Лідія</Person>
+    <Event>весілля</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>07.10.1973 11:11:29</On_date>
+    <Sort>1007</Sort>
+  </Table1>
+  <Table1>
+    <Id>64</Id>
+    <Person>Ватаманюк Олександр та Надія</Person>
+    <Event>весілля</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>07.10.2000 11:11:29</On_date>
+    <Sort>1007</Sort>
+  </Table1>
+  <Table1>
+    <Id>65</Id>
+    <Person>Нємой Михайло та Надія</Person>
+    <Event>весілля</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>07.10.2007 11:11:29</On_date>
+    <Sort>1007</Sort>
+  </Table1>
+  <Table1>
+    <Id>66</Id>
+    <Person>Костомська Лідія Яківна</Person>
+    <Event>день народження</Event>
+    <Comment>фіни</Comment>
+    <On_date>08.10.1951 11:11:29</On_date>
+    <Sort>1008</Sort>
+  </Table1>
+  <Table1>
+    <Id>67</Id>
+    <Person>Немой Михайло</Person>
+    <Event>день народження</Event>
+    <Comment>фін</Comment>
+    <On_date>19.10.1984 11:11:29</On_date>
+    <Sort>1019</Sort>
+  </Table1>
+  <Table1>
+    <Id>68</Id>
+    <Person>Надюшка</Person>
+    <Event>смерть</Event>
+    <Comment>кохана</Comment>
+    <On_date>19.10.2020 11:11:29</On_date>
+    <Sort>1019</Sort>
+  </Table1>
+  <Table1>
+    <Id>69</Id>
+    <Person>Борісов Володимир</Person>
+    <Event>день народження</Event>
+    <Comment>співробітник Чернісофт</Comment>
+    <On_date>20.10.1977 11:11:29</On_date>
+    <Sort>1020</Sort>
+  </Table1>
+  <Table1>
+    <Id>70</Id>
+    <Person>Вікірюк Віталій Миколайович</Person>
+    <Event>день народження</Event>
+    <Comment>друг</Comment>
+    <On_date>28.10.1974 11:11:29</On_date>
+    <Sort>1028</Sort>
+  </Table1>
+  <Table1>
+    <Id>71</Id>
+    <Person>Вікірюк Павліна</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>01.11.1950 11:11:29</On_date>
+    <Sort>1101</Sort>
+  </Table1>
+  <Table1>
+    <Id>72</Id>
+    <Person>Неборак Данило</Person>
+    <Event>день народження</Event>
+    <Comment>друг Максима</Comment>
+    <On_date>06.11.2013 11:11:29</On_date>
+    <Sort>1106</Sort>
+  </Table1>
+  <Table1>
+    <Id>73</Id>
+    <Person>Бабич Павло</Person>
+    <Event>день народження</Event>
+    <Comment>фін</Comment>
+    <On_date>13.11.1978 11:11:29</On_date>
+    <Sort>1113</Sort>
+  </Table1>
+  <Table1>
+    <Id>74</Id>
+    <Person>Ватаманюк Іван Васильович</Person>
+    <Event>день народження</Event>
+    <Comment>тато</Comment>
+    <On_date>13.11.1950 11:11:29</On_date>
+    <Sort>1113</Sort>
+  </Table1>
+  <Table1>
+    <Id>75</Id>
+    <Person>дід Петро</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>15.11.1925 11:11:29</On_date>
+    <Sort>1115</Sort>
+  </Table1>
+  <Table1>
+    <Id>76</Id>
+    <Person>Ватаманюк-Костомська Надія</Person>
+    <Event>день народження</Event>
+    <Comment>кохана</Comment>
+    <On_date>18.11.1976 11:11:29</On_date>
+    <Sort>1118</Sort>
+  </Table1>
+  <Table1>
+    <Id>77</Id>
+    <Person>Вікірюк Лілія Миколаївна</Person>
+    <Event>день народження</Event>
+    <Comment>друг</Comment>
+    <On_date>21.11.1974 11:11:29</On_date>
+    <Sort>1121</Sort>
+  </Table1>
+  <Table1>
+    <Id>78</Id>
+    <Person>Ватаманюк Ольга Іванівна</Person>
+    <Event>день народження</Event>
+    <Comment>сестричка</Comment>
+    <On_date>29.11.1983 11:11:29</On_date>
+    <Sort>1129</Sort>
+  </Table1>
+  <Table1>
+    <Id>79</Id>
+    <Person>Калинюк Степна</Person>
+    <Event>день народження</Event>
+    <Comment>співробітник Газ</Comment>
+    <On_date>04.12.1990 11:11:29</On_date>
+    <Sort>1204</Sort>
+  </Table1>
+  <Table1>
+    <Id>80</Id>
+    <Person>Миколай</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>06.12.1990 11:11:29</On_date>
+    <Sort>1206</Sort>
+  </Table1>
+  <Table1>
+    <Id>81</Id>
+    <Person>Вікірюк Микола Іванович</Person>
+    <Event>день народження</Event>
+    <Comment>друг</Comment>
+    <On_date>07.12.1948 11:11:29</On_date>
+    <Sort>1207</Sort>
+  </Table1>
+  <Table1>
+    <Id>82</Id>
+    <Person>Андрія</Person>
+    <Event>день ангела</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>30.11.1948 11:11:29</On_date>
+    <Sort>1130</Sort>
+  </Table1>
+  <Table1>
+    <Id>83</Id>
+    <Person>Городенський Ярослав Даринович</Person>
+    <Event>день народження</Event>
+    <Comment>кум</Comment>
+    <On_date>16.12.1973 11:11:29</On_date>
+    <Sort>1216</Sort>
+  </Table1>
+  <Table1>
+    <Id>84</Id>
+    <Person>Нємой Антон Михайлович</Person>
+    <Event>день народження</Event>
+    <Comment>похресник</Comment>
+    <On_date>20.12.2008 11:11:29</On_date>
+    <Sort>1220</Sort>
+  </Table1>
+  <Table1>
+    <Id>85</Id>
+    <Person>Маланіч Віта</Person>
+    <Event>похорон</Event>
+    <Comment>кума</Comment>
+    <On_date>25.12.2022 11:11:29</On_date>
+    <Sort>1225</Sort>
+  </Table1>
+  <Table1>
+    <Id>86</Id>
+    <Person>Неборак Оксана</Person>
+    <Event>день народження</Event>
+    <Comment xml:space="preserve"> </Comment>
+    <On_date>28.12.2012 11:11:29</On_date>
+    <Sort>1228</Sort>
+  </Table1>
+  <Table1>
+    <Id>87</Id>
+    <Person>Ватаманюк Марія Василівна</Person>
+    <Event>день народження</Event>
+    <Comment>мамуся</Comment>
+    <On_date>29.02.1952 11:11:29</On_date>
+    <Sort>0229</Sort>
+  </Table1>
 </Events>
