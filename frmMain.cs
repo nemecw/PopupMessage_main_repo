@@ -38,14 +38,9 @@ namespace PopupMessage
             grid_Main.DataBindings.Add(new Binding("DataSource", CA, "Source", false, DataSourceUpdateMode.OnPropertyChanged));
             grid_Main.MasterTemplate.AddNewBoundRowBeforeEdit = true;
 
-            CA.LoadData(out string Message);
-
-            if (Message != "ok")
-            {
-                MessageBox.Show(Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (!LoadData())
                 return;
-            }
-
+            
             grid_Main.DataSource = CA.Source;
 
             grid_Main.CurrentRow = (CA.Source.Count == 0) ? null : grid_Main.Rows[0];
@@ -71,7 +66,9 @@ namespace PopupMessage
         {
             if (CA.IsSourceChanged)
             {
-                if (MessageBox.Show(CAT.SourceIsChanged, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                var answer = MessageBox.Show(CAT.SourceIsChanged, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (answer == DialogResult.No)
                 {
                     return;
                 }
@@ -85,6 +82,7 @@ namespace PopupMessage
                     return;
                 }
 
+                CA.MoveFilesToDefaultLocation();
             }
         }
 
@@ -122,6 +120,39 @@ namespace PopupMessage
             descriptor.PropertyName = "Sort";
             descriptor.Direction = ListSortDirection.Ascending;
             this.grid_Main.MasterTemplate.SortDescriptors.Add(descriptor);
+        }
+
+        private void btn_Settings_Click(object sender, EventArgs e)
+        {
+            frmSettings form = new frmSettings(CA.path_Default);
+            form.ShowDialog();
+
+            if (form.isClosedWithButton)
+            {
+                if (CA.path_Default != form.Data_Path)
+                {
+                    CA.SaveNewSettings(form.Data_Path, out string Message);
+
+                    if (Message != "ok")
+                    {
+                        MessageBox.Show(Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        CA.ClearSources();
+
+                        timerSave.Enabled = false;
+
+                        return;
+                    }
+
+                    timerSave.Enabled = false;
+
+                    LoadData();
+
+                    CA.path_Default = form.Data_Path;
+
+                    timerSave.Enabled = true;
+                }
+            }
         }
 
         #endregion
@@ -226,6 +257,20 @@ namespace PopupMessage
             }
         }
 
+        private bool LoadData()
+        {
+            CA.GetSettings(out string Message);
+
+            if (Message != "ok")
+            {
+                MessageBox.Show(Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            CA.LoadData(out Message);
+
+            return true;
+        }
 
         #endregion
     }

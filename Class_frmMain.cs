@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using Windows.ApplicationModel.Email.DataProvider;
 
 namespace PopupMessage
 {
@@ -20,14 +21,28 @@ namespace PopupMessage
 
         #endregion
 
+        public static class DefaultSettings
+        {
+            public static string const_DataFile = "data.xml";
+            public static string const_EventFile = "events.xml";
+            public static string const_SettingsFile = "settings.xml";
+        }
+
         #region Variables
 
         public BindingList<clsSource> Source { get; set; }
         public List<string> EventSource { get; set; }
         public List<clsSource> AlertSource { get; set; }
 
-        string pathToDataFile = "data.xml";
-        string pathToEventFile = "events.xml";
+        string path_DataFile => $"{Environment.CurrentDirectory}\\{DefaultSettings.const_DataFile}";
+        string path_EventFile = $"{Environment.CurrentDirectory}\\{DefaultSettings.const_EventFile}";
+        string path_SettingsFile = $"{Environment.CurrentDirectory}\\{DefaultSettings.const_SettingsFile}";
+
+        public string path_Default = "E:\\PROJECT\\NET\\PopupMessage\\Data";
+
+        string path_Default_DataFile => $"{path_Default}\\{DefaultSettings.const_DataFile}";
+        string path_Default_EventFile => $"{path_Default}\\{DefaultSettings.const_EventFile}";
+        string path_Default_SettingsFile => $"{path_Default}\\{DefaultSettings.const_SettingsFile}";
 
         #endregion
 
@@ -40,34 +55,114 @@ namespace PopupMessage
             AlertSource = new List<clsSource>();
         }
 
+        public void ClearSources()
+        {
+            Source.Clear();
+            EventSource.Clear();
+            AlertSource.Clear();
+        }
+
         #endregion
 
         #region Load data
+
+        public bool GetSettings(out string Message, bool defaultFiles = false)
+        {
+            Message = "ok";
+
+            if (!File.Exists(DefaultSettings.const_SettingsFile))
+            {
+                if (!File.Exists(path_Default_SettingsFile))
+                {
+                    Message = $"Файл з налаштуваннями відсутній ({DefaultSettings.const_SettingsFile})";
+                    return false;
+                }
+            }
+            else
+            {
+                File.Copy(path_Default_SettingsFile, path_SettingsFile, overwrite: true);
+            }
+
+            /*
+             
+             <Settings>
+              <Item>
+                <PATH>E:\PROJECT\NET\PopupMessage\Data\</PATH>
+              </Item>
+             </Settings>
+
+             */
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(DefaultSettings.const_SettingsFile);
+
+            var xmlData = doc.DocumentElement.ChildNodes;
+
+            if (xmlData[0].ChildNodes.Count == 0)
+            {
+                Message = $"Невірний формат файлу конфігурації ({DefaultSettings.const_SettingsFile})";
+                return false;
+            }
+
+            foreach (var lineXml in xmlData[0].ChildNodes)
+            {
+                var value = (((XmlNode)lineXml).ChildNodes)[0].InnerText;
+
+                if ((((XmlNode)lineXml).ChildNodes)[0].ParentNode.Name == "PATH")
+                {
+                    path_Default = value;
+                    break;
+                }
+            }
+
+            if (path_Default.IsNullOrEmpty())
+            {
+                Message = $"Невірний формат файлу конфігурації ({DefaultSettings.const_SettingsFile})";
+                return false;
+            }
+
+            doc = null;
+            xmlData = null;
+
+            return true;
+        }
 
         public bool LoadData(out string Message)
         {
             Message = "ok";
 
-            if (!File.Exists(pathToEventFile))
+            if (!File.Exists(DefaultSettings.const_EventFile))
             {
-                Message = "error";
+                if (!File.Exists(path_Default_EventFile))
+                {
+                    Message = $"Файл з типізацією подій відсутній ({DefaultSettings.const_EventFile})";
+                    return false;
+                }
+            }
+            else
+            {
+                File.Copy(path_Default_EventFile, path_EventFile, overwrite: true);
+            }
 
-                return false;
+            if (!File.Exists(DefaultSettings.const_DataFile))
+            {
+                if (!File.Exists(path_Default_EventFile))
+                {
+                    Message = $"Файл даними відсутній ({DefaultSettings.const_DataFile})";
+                    return false;
+                }
+            }
+            else
+            {
+                File.Copy(path_Default_EventFile, path_EventFile, overwrite: true);
             }
 
             GetEventSource();
 
             Source.Clear();
 
-            if (!File.Exists(pathToDataFile))
-            {
-                Message = "error";
-
-                return false;
-            }
-
             XmlDocument doc = new XmlDocument();
-            doc.Load(pathToDataFile);
+            doc.Load(DefaultSettings.const_DataFile);
 
             BindingList<clsSource> Items = new BindingList<clsSource>();
 
@@ -93,6 +188,8 @@ namespace PopupMessage
             SaveSourceState();
 
             PrepareAlertSource();
+
+            doc = null;
 
             return true;
         }
@@ -143,7 +240,7 @@ namespace PopupMessage
                 ds.Tables.Add(dt);
 
                 //Finally the save part:
-                XmlTextWriter xmlSave = new XmlTextWriter(pathToDataFile, Encoding.UTF8);
+                XmlTextWriter xmlSave = new XmlTextWriter(DefaultSettings.const_DataFile, Encoding.UTF8);
                 xmlSave.Formatting = System.Xml.Formatting.Indented;
                 ds.DataSetName = "Events";
                 ds.WriteXml(xmlSave);
@@ -170,7 +267,7 @@ namespace PopupMessage
             EventSource.Clear();
 
             XmlDocument doc = new XmlDocument();
-            doc.Load(pathToEventFile);
+            doc.Load(DefaultSettings.const_EventFile);
 
             foreach (var lineXml in doc.DocumentElement.ChildNodes)
             {
@@ -197,6 +294,45 @@ namespace PopupMessage
             AlertSource.Clear();
 
             AlertSource.AddRange(items);
+        }
+
+        public bool SaveNewSettings(string newPath, out string Message)
+        {
+            Message = "ok";
+
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("path");
+
+            dt.Rows.Add(newPath);
+
+            try
+            {
+                DataSet ds = new DataSet();
+                ds.Tables.Add(dt);
+
+                //Finally the save part:
+                XmlTextWriter xmlSave = new XmlTextWriter(DefaultSettings.const_SettingsFile, Encoding.UTF8);
+                xmlSave.Formatting = System.Xml.Formatting.Indented;
+                ds.DataSetName = "Settings";
+                ds.WriteXml(xmlSave);
+                xmlSave.Close();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public void MoveFilesToDefaultLocation()
+        {
+            File.Copy(path_SettingsFile, path_Default_SettingsFile, overwrite: true);
+            File.Copy(path_DataFile, path_Default_DataFile, overwrite: true);
+            File.Copy(path_EventFile, path_Default_EventFile, overwrite: true);
         }
 
         #endregion

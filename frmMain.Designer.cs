@@ -52,6 +52,7 @@
             lbl_Saving = new Label();
             timerAlert = new System.Windows.Forms.Timer(components);
             notifyIcon1 = new NotifyIcon(components);
+            btn_Settings = new Button();
             ((System.ComponentModel.ISupportInitialize)grid_Main).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grid_Main.MasterTemplate).BeginInit();
             groupBox1.SuspendLayout();
@@ -216,7 +217,7 @@
             // btn_Add
             // 
             btn_Add.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_Add.Location = new Point(387, 6);
+            btn_Add.Location = new Point(387, 5);
             btn_Add.Name = "btn_Add";
             btn_Add.Size = new Size(84, 36);
             btn_Add.TabIndex = 11;
@@ -233,7 +234,7 @@
             panel1.Location = new Point(5, 413);
             panel1.Name = "panel1";
             panel1.Size = new Size(478, 49);
-            panel1.TabIndex = 12;
+            panel1.TabIndex = 7;
             // 
             // timerSave
             // 
@@ -265,11 +266,22 @@
             notifyIcon1.Visible = true;
             notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
             // 
+            // btn_Settings
+            // 
+            btn_Settings.Image = Properties.Resources.Settings;
+            btn_Settings.Location = new Point(722, 416);
+            btn_Settings.Name = "btn_Settings";
+            btn_Settings.Size = new Size(46, 39);
+            btn_Settings.TabIndex = 8;
+            btn_Settings.UseVisualStyleBackColor = true;
+            btn_Settings.Click += btn_Settings_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(777, 471);
+            Controls.Add(btn_Settings);
             Controls.Add(lbl_Saving);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
@@ -308,5 +320,6 @@
         private Label lbl_Saving;
         private System.Windows.Forms.Timer timerAlert;
         private NotifyIcon notifyIcon1;
+        private Button btn_Settings;
     }
 }

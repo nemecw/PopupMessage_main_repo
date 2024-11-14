@@ -32,7 +32,7 @@ namespace PopupMessage
             else if (value is float sng)
                 return q(sng);
             else if (value is decimal dic)
-                return dic.ToString().Replace(",", "."); //TODO: Aggiungere .q() per Decimal
+                return dic.ToString().Replace(",", "."); 
             else if (value is bool bol)
                 return q(bol);
             else if (value is DateTime dt)

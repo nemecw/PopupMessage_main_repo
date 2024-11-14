@@ -1,1 +1,7 @@
+.vs
+bin
+obj
 Data/
+Icons/
+NuGet.Config
+run.bat
